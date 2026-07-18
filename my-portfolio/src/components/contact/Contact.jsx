@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiGithub, FiLinkedin, FiMail, FiSend } from 'react-icons/fi'
 import emailjs from '@emailjs/browser'
@@ -6,8 +6,7 @@ import SectionWrapper from '../ui/SectionWrapper'
 
 export default function Contact() {
   const { t } = useTranslation()
-  const formRef = useRef()
-  const [form, setForm] = useState({ from_name: '', from_email: '', subject: '', message: '' })
+  const [form, setForm] = useState({ from_name: '', from_email: '', phone: '', subject: '', message: '' })
   const [status, setStatus] = useState('idle')
 
   const handleChange = (e) => {
@@ -19,14 +18,20 @@ export default function Contact() {
     setStatus('sending')
 
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         'service_jl2wrgv',
         'template_lxqytag',
-        formRef.current,
+        {
+          from_name: form.from_name,
+          from_email: form.from_email,
+          phone: form.phone,
+          subject: form.subject,
+          message: form.message,
+        },
         { publicKey: 'n-Yl5Cju-gSBhPZte' },
       )
       setStatus('sent')
-      setForm({ from_name: '', from_email: '', subject: '', message: '' })
+      setForm({ from_name: '', from_email: '', phone: '', subject: '', message: '' })
     } catch {
       setStatus('error')
     }
@@ -41,8 +46,7 @@ export default function Contact() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
-        <form ref={formRef} onSubmit={handleSubmit} className="flex-1 space-y-4">
-          <input type="hidden" name="phone" value="" />
+        <form onSubmit={handleSubmit} className="flex-1 space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">{t('contact.name')}</label>
             <input
@@ -68,13 +72,24 @@ export default function Contact() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Subject</label>
+            <label className="block text-sm font-medium mb-1">{t('contact.phone')}</label>
+            <input
+              type="tel"
+              name="phone"
+              value={form.phone}
+              onChange={handleChange}
+              placeholder={t('contact.placeholderPhone')}
+              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">{t('contact.subject')}</label>
             <input
               type="text"
               name="subject"
               value={form.subject}
               onChange={handleChange}
-              placeholder="Subject"
+              placeholder={t('contact.placeholderSubject')}
               className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
             />
           </div>
