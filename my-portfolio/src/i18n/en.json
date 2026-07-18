@@ -73,9 +73,7 @@
     "placeholderName": "John Doe",
     "placeholderEmail": "john@example.com",
     "phone": "Phone",
-    "subject": "Subject",
     "placeholderPhone": "+84 123 456 789",
-    "placeholderSubject": "Job Opportunity",
     "placeholderMessage": "Hi, I'd like to connect with you..."
   },
   "footer": {

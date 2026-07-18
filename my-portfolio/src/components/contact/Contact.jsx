@@ -6,7 +6,7 @@ import SectionWrapper from '../ui/SectionWrapper'
 
 export default function Contact() {
   const { t } = useTranslation()
-  const [form, setForm] = useState({ from_name: '', from_email: '', phone: '', subject: '', message: '' })
+  const [form, setForm] = useState({ from_name: '', from_email: '', phone: '', message: '' })
   const [status, setStatus] = useState('idle')
 
   const handleChange = (e) => {
@@ -25,13 +25,12 @@ export default function Contact() {
           from_name: form.from_name,
           from_email: form.from_email,
           phone: form.phone,
-          subject: form.subject,
           message: form.message,
         },
         { publicKey: 'n-Yl5Cju-gSBhPZte' },
       )
       setStatus('sent')
-      setForm({ from_name: '', from_email: '', phone: '', subject: '', message: '' })
+      setForm({ from_name: '', from_email: '', phone: '', message: '' })
     } catch {
       setStatus('error')
     }
@@ -82,17 +81,7 @@ export default function Contact() {
               className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium mb-1">{t('contact.subject')}</label>
-            <input
-              type="text"
-              name="subject"
-              value={form.subject}
-              onChange={handleChange}
-              placeholder={t('contact.placeholderSubject')}
-              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-            />
-          </div>
+
           <div>
             <label className="block text-sm font-medium mb-1">{t('contact.message')}</label>
             <textarea
