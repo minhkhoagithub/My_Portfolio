@@ -15,6 +15,7 @@
     "role": "Developer Intern",
     "tagline": "Fourth-year Software Engineering student passionate about building modern web applications.",
     "viewProjects": "View Projects",
+    "downloadCV": "Download CV",
     "contactMe": "Contact Me"
   },
   "about": {
@@ -68,6 +69,7 @@
     "send": "Send Message",
     "sending": "Sending...",
     "sent": "Message sent successfully!",
+    "error": "Failed to send. Try again!",
     "placeholderName": "John Doe",
     "placeholderEmail": "john@example.com",
     "placeholderMessage": "Hi, I'd like to connect with you..."

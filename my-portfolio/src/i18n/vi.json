@@ -15,6 +15,7 @@
     "role": "Thực tập sinh Developer",
     "tagline": "Sinh viên năm 4 ngành Kỹ thuật Phần mềm, đam mê xây dựng ứng dụng web hiện đại.",
     "viewProjects": "Xem Dự Án",
+    "downloadCV": "Tải CV",
     "contactMe": "Liên Hệ"
   },
   "about": {
@@ -68,6 +69,7 @@
     "send": "Gửi Tin Nhắn",
     "sending": "Đang gửi...",
     "sent": "Gửi tin nhắn thành công!",
+    "error": "Gửi thất bại. Thử lại!",
     "placeholderName": "Nguyễn Văn A",
     "placeholderEmail": "nguyenvana@example.com",
     "placeholderMessage": "Xin chào, tôi muốn kết nối với bạn..."

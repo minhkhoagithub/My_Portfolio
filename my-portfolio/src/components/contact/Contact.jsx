@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FiGithub, FiLinkedin, FiMail, FiSend } from 'react-icons/fi'
+import emailjs from '@emailjs/browser'
 import SectionWrapper from '../ui/SectionWrapper'
 
 export default function Contact() {
   const { t } = useTranslation()
+  const formRef = useRef()
   const [form, setForm] = useState({ name: '', email: '', message: '' })
   const [status, setStatus] = useState('idle')
 
@@ -15,10 +17,20 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setStatus('sending')
-    // Using setTimeout to simulate sending — replace with EmailJS or Formspree later
-    await new Promise((r) => setTimeout(r, 1000))
-    setStatus('sent')
-    setForm({ name: '', email: '', message: '' })
+
+    try {
+      await emailjs.sendForm(
+        'service_jl2wrgv',
+        'template_lxqytag',
+        formRef.current,
+        { publicKey: 'n-Yl5Cju-gSBhPZte' },
+      )
+      setStatus('sent')
+      setForm({ name: '', email: '', message: '' })
+    } catch {
+      setStatus('error')
+    }
+
     setTimeout(() => setStatus('idle'), 3000)
   }
 
@@ -29,7 +41,7 @@ export default function Contact() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
-        <form onSubmit={handleSubmit} className="flex-1 space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="flex-1 space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">{t('contact.name')}</label>
             <input
@@ -72,7 +84,7 @@ export default function Contact() {
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors cursor-pointer"
           >
             <FiSend className="w-4 h-4" />
-            {status === 'sending' ? t('contact.sending') : status === 'sent' ? t('contact.sent') : t('contact.send')}
+            {status === 'sending' ? t('contact.sending') : status === 'sent' ? t('contact.sent') : status === 'error' ? t('contact.error') : t('contact.send')}
           </button>
         </form>
 

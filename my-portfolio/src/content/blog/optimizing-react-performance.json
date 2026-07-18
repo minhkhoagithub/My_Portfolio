@@ -1,0 +1,10 @@
+{
+  "slug": "optimizing-react-performance",
+  "title": "Optimizing React Application Performance",
+  "titleVi": "Tối ưu hiệu suất ứng dụng React",
+  "date": "2026-04-10",
+  "excerpt": "Learn practical techniques for optimizing React applications, from code splitting to efficient state management.",
+  "excerptVi": "Tìm hiểu các kỹ thuật tối ưu ứng dụng React, từ code splitting đến quản lý state hiệu quả.",
+  "content": "Performance optimization is crucial for modern web applications. Users expect fast load times and smooth interactions, and search engines reward well-performing sites.\n\nCode splitting with React.lazy and Suspense allows you to split your bundle into smaller chunks that load on demand. This significantly reduces the initial bundle size.\n\nMemoization techniques using React.memo, useMemo, and useCallback help prevent unnecessary re-renders. However, use them judiciously as they come with their own overhead.\n\nState management plays a critical role in performance. Keep state as close to where it is needed as possible, and consider using libraries like Zustand for global state.",
+  "tags": ["React", "Performance", "Optimization"]
+}

@@ -1,47 +1,5 @@
-export const blogPosts = [
-  {
-    slug: 'building-modern-web-apps-with-react',
-    title: 'Building Modern Web Applications with React',
-    titleVi: 'Xây dựng ứng dụng web hiện đại với React',
-    date: '2026-06-15',
-    excerpt: 'A comprehensive guide to building modern web applications using React 19, exploring the latest features and best practices.',
-    excerptVi: 'Hướng dẫn toàn diện về xây dựng ứng dụng web hiện đại với React 19, khám phá các tính năng mới nhất.',
-    content: [
-      'React 19 introduces several groundbreaking features that change how we build web applications. From the new compiler to improved server components, the ecosystem continues to evolve.',
-      'The new React compiler eliminates the need for manual memoization, automatically optimizing re-renders. This means cleaner code and better performance out of the box.',
-      'Server Components allow you to render components on the server, reducing the JavaScript bundle size and improving initial page load times. This pattern is particularly useful for data-heavy applications.',
-      'Actions and the new use() hook simplify data fetching and mutations. Together with Server Actions, you can handle form submissions and data mutations without writing API routes.',
-    ],
-    tags: ['React', 'JavaScript', 'Web Development'],
-  },
-  {
-    slug: 'tailwind-css-v4-guide',
-    title: 'Tailwind CSS v4: What is New',
-    titleVi: 'Tailwind CSS v4: Có gì mới',
-    date: '2026-05-20',
-    excerpt: 'An overview of the exciting new features in Tailwind CSS v4, including the new engine, CSS-first configuration, and improved performance.',
-    excerptVi: 'Tổng quan về các tính năng mới trong Tailwind CSS v4, bao gồm engine mới, cấu hình CSS-first.',
-    content: [
-      'Tailwind CSS v4 marks a significant milestone with its completely rewritten engine. The new version introduces a CSS-first configuration approach that feels more natural.',
-      'One of the biggest changes is the removal of the tailwind.config.js file. Configuration is now done directly in your CSS using the @theme directive, making it more intuitive.',
-      'The new engine is built on top of Lightning CSS, resulting in dramatically faster build times. Projects that took seconds now compile in milliseconds.',
-      'New features like container queries, the @variant directive, and improved dark mode support make Tailwind v4 the most powerful version yet.',
-    ],
-    tags: ['Tailwind CSS', 'CSS', 'Frontend'],
-  },
-  {
-    slug: 'optimizing-react-performance',
-    title: 'Optimizing React Application Performance',
-    titleVi: 'Tối ưu hiệu suất ứng dụng React',
-    date: '2026-04-10',
-    excerpt: 'Learn practical techniques for optimizing React applications, from code splitting to efficient state management.',
-    excerptVi: 'Tìm hiểu các kỹ thuật tối ưu ứng dụng React, từ code splitting đến quản lý state hiệu quả.',
-    content: [
-      'Performance optimization is crucial for modern web applications. Users expect fast load times and smooth interactions, and search engines reward well-performing sites.',
-      'Code splitting with React.lazy and Suspense allows you to split your bundle into smaller chunks that load on demand. This significantly reduces the initial bundle size.',
-      'Memoization techniques using React.memo, useMemo, and useCallback help prevent unnecessary re-renders. However, use them judiciously as they come with their own overhead.',
-      'State management plays a critical role in performance. Keep state as close to where it is needed as possible, and consider using libraries like Zustand for global state.',
-    ],
-    tags: ['React', 'Performance', 'Optimization'],
-  },
-]
+const postFiles = import.meta.glob('../content/blog/*.json', { eager: true })
+
+export const blogPosts = Object.values(postFiles)
+  .map((module) => module.default)
+  .sort((a, b) => new Date(b.date) - new Date(a.date))

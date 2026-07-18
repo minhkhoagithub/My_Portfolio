@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: minhkhoagithub/My_Portfolio
+  branch: main
+  base_url: https://my-portfolio-three-rosy-76.vercel.app
+  auth_endpoint: api/auth
+
+publish_mode: editorial_workflow
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: blog
+    label: Blog Posts
+    label_singular: Post
+    folder: src/content/blog
+    create: true
+    slug: '{{slug}}'
+    extension: json
+    format: json
+    editor:
+      preview: false
+    fields:
+      - { label: Slug, name: slug, widget: string, hint: 'URL identifier (e.g. my-post-title)' }
+      - { label: Title (English), name: title, widget: string }
+      - { label: Title (Vietnamese), name: titleVi, widget: string }
+      - { label: Date, name: date, widget: datetime, format: 'YYYY-MM-DD' }
+      - { label: Tags, name: tags, widget: list, default: ['React'] }
+      - { label: Excerpt (English), name: excerpt, widget: text }
+      - { label: Excerpt (Vietnamese), name: excerptVi, widget: text }
+      - { label: Content, name: content, widget: markdown }

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { useParams, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
+import ReactMarkdown from 'react-markdown'
 import { blogPosts } from '../../data/blog'
 
 export default function BlogPost() {
@@ -49,11 +50,7 @@ export default function BlogPost() {
           </p>
 
           <div className="prose prose-gray dark:prose-invert max-w-none">
-            {post.content.map((paragraph, i) => (
-              <p key={i} className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                {paragraph}
-              </p>
-            ))}
+            <ReactMarkdown>{post.content}</ReactMarkdown>
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">

@@ -1,4 +1,5 @@
 *.pdf
+!my-portfolio/public/cv.pdf
 *.txt
 *.jpg
 *.png

@@ -1,0 +1,10 @@
+{
+  "slug": "building-modern-web-apps-with-react",
+  "title": "Building Modern Web Applications with React",
+  "titleVi": "Xây dựng ứng dụng web hiện đại với React",
+  "date": "2026-06-15",
+  "excerpt": "A comprehensive guide to building modern web applications using React 19, exploring the latest features and best practices.",
+  "excerptVi": "Hướng dẫn toàn diện về xây dựng ứng dụng web hiện đại với React 19, khám phá các tính năng mới nhất.",
+  "content": "React 19 introduces several groundbreaking features that change how we build web applications. From the new compiler to improved server components, the ecosystem continues to evolve.\n\nThe new React compiler eliminates the need for manual memoization, automatically optimizing re-renders. This means cleaner code and better performance out of the box.\n\nServer Components allow you to render components on the server, reducing the JavaScript bundle size and improving initial page load times. This pattern is particularly useful for data-heavy applications.\n\nActions and the new use() hook simplify data fetching and mutations. Together with Server Actions, you can handle form submissions and data mutations without writing API routes.",
+  "tags": ["React", "JavaScript", "Web Development"]
+}

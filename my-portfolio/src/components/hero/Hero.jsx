@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { FiDownload } from 'react-icons/fi'
 
 export default function Hero() {
   const { t } = useTranslation()
@@ -38,6 +39,14 @@ export default function Hero() {
           >
             {t('hero.viewProjects')}
           </button>
+          <a
+            href="/cv.pdf"
+            download
+            className="flex items-center justify-center gap-2 px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          >
+            <FiDownload className="w-4 h-4" />
+            {t('hero.downloadCV')}
+          </a>
           <button
             onClick={() => scrollTo('contact')}
             className="px-8 py-3 border border-gray-300 dark:border-gray-700 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
