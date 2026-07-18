@@ -7,7 +7,7 @@ import SectionWrapper from '../ui/SectionWrapper'
 export default function Contact() {
   const { t } = useTranslation()
   const formRef = useRef()
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
+  const [form, setForm] = useState({ from_name: '', from_email: '', subject: '', message: '' })
   const [status, setStatus] = useState('idle')
 
   const handleChange = (e) => {
@@ -26,7 +26,7 @@ export default function Contact() {
         { publicKey: 'n-Yl5Cju-gSBhPZte' },
       )
       setStatus('sent')
-      setForm({ name: '', email: '', message: '' })
+      setForm({ from_name: '', from_email: '', subject: '', message: '' })
     } catch {
       setStatus('error')
     }
@@ -42,12 +42,13 @@ export default function Contact() {
 
       <div className="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
         <form ref={formRef} onSubmit={handleSubmit} className="flex-1 space-y-4">
+          <input type="hidden" name="phone" value="" />
           <div>
             <label className="block text-sm font-medium mb-1">{t('contact.name')}</label>
             <input
               type="text"
-              name="name"
-              value={form.name}
+              name="from_name"
+              value={form.from_name}
               onChange={handleChange}
               placeholder={t('contact.placeholderName')}
               required
@@ -58,11 +59,22 @@ export default function Contact() {
             <label className="block text-sm font-medium mb-1">{t('contact.email')}</label>
             <input
               type="email"
-              name="email"
-              value={form.email}
+              name="from_email"
+              value={form.from_email}
               onChange={handleChange}
               placeholder={t('contact.placeholderEmail')}
               required
+              className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Subject</label>
+            <input
+              type="text"
+              name="subject"
+              value={form.subject}
+              onChange={handleChange}
+              placeholder="Subject"
               className="w-full px-4 py-2.5 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
             />
           </div>
