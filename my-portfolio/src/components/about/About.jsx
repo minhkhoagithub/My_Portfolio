@@ -11,7 +11,13 @@ export default function About() {
       </h2>
 
       <div className="flex flex-col md:flex-row items-center gap-10">
-        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex-shrink-0" />
+        <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-blue-200 dark:border-blue-800">
+          <img
+            src="/images/avatar.jpg"
+            alt="Le Minh Khoa"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         <div className="flex-1">
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
