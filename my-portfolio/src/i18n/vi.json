@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "testimonials": "Nhận xét",
+    "blog": "Blog",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "greeting": "Xin chào, tôi là",
+    "name": "Lê Minh Khoa",
+    "role": "Thực tập sinh Developer",
+    "tagline": "Sinh viên năm 4 ngành Kỹ thuật Phần mềm, đam mê xây dựng ứng dụng web hiện đại.",
+    "viewProjects": "Xem Dự Án",
+    "contactMe": "Liên Hệ"
+  },
+  "about": {
+    "title": "Giới Thiệu",
+    "description": "Sinh viên năm 4 ngành Kỹ thuật Phần mềm với kỹ năng về Java, JavaScript, ReactJS, Spring Boot, Git và SQL. Tìm kiếm cơ hội thực tập Software Engineer để tích lũy kinh nghiệm thực tế và phát triển bản thân.",
+    "name": "Họ tên",
+    "email": "Email",
+    "location": "Địa chỉ",
+    "availability": "Trạng thái",
+    "nameValue": "Lê Minh Khoa",
+    "emailValue": "minhkhoa0753@gmail.com",
+    "locationValue": "Quận Gò Vấp, TP. Hồ Chí Minh",
+    "availabilityValue": "Sẵn sàng nhận thực tập",
+    "education": "Học vấn",
+    "phone": "SĐT",
+    "phoneValue": "0328 462 264",
+    "school": "Đại học Công nghiệp TP. Hồ Chí Minh",
+    "major": "Kỹ thuật Phần mềm",
+    "gpa": "GPA: 7.9",
+    "year": "2022 - Nay"
+  },
+  "experience": {
+    "title": "Kinh Nghiệm"
+  },
+  "skills": {
+    "title": "Kỹ Năng",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Công cụ & Khác"
+  },
+  "projects": {
+    "title": "Dự Án",
+    "viewProject": "Xem Demo",
+    "viewCode": "Mã Nguồn",
+    "techStack": "Công nghệ"
+  },
+  "testimonials": {
+    "title": "Nhận Xét"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Đọc Tiếp",
+    "viewAll": "Xem Tất Cả",
+    "noPosts": "Chưa có bài viết nào."
+  },
+  "contact": {
+    "title": "Liên Hệ",
+    "name": "Họ tên",
+    "email": "Email",
+    "message": "Lời nhắn",
+    "send": "Gửi Tin Nhắn",
+    "sending": "Đang gửi...",
+    "sent": "Gửi tin nhắn thành công!",
+    "placeholderName": "Nguyễn Văn A",
+    "placeholderEmail": "nguyenvana@example.com",
+    "placeholderMessage": "Xin chào, tôi muốn kết nối với bạn..."
+  },
+  "footer": {
+    "copyright": "Đã đăng ký bản quyền.",
+    "backToTop": "Lên đầu trang"
+  }
+}

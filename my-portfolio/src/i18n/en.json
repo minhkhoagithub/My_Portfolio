@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Le Minh Khoa",
+    "role": "Developer Intern",
+    "tagline": "Fourth-year Software Engineering student passionate about building modern web applications.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Fourth-year Software Engineering student skilled in Java, JavaScript, ReactJS, Spring Boot, Git, and SQL, seeking a Software Engineer internship to gain real-world experience and grow as a professional developer.",
+    "name": "Name",
+    "email": "Email",
+    "location": "Location",
+    "availability": "Availability",
+    "nameValue": "Le Minh Khoa",
+    "emailValue": "minhkhoa0753@gmail.com",
+    "locationValue": "Go Vap District, Ho Chi Minh City",
+    "availabilityValue": "Open to internship opportunities",
+    "education": "Education",
+    "phone": "Phone",
+    "phoneValue": "0328 462 264",
+    "school": "Industrial University of Ho Chi Minh City",
+    "major": "Software Engineering",
+    "gpa": "GPA: 7.9",
+    "year": "2022 - Present"
+  },
+  "experience": {
+    "title": "Experience"
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools & Others"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "Live Demo",
+    "viewCode": "Source Code",
+    "techStack": "Tech Stack"
+  },
+  "testimonials": {
+    "title": "Testimonials"
+  },
+  "blog": {
+    "title": "Blog",
+    "readMore": "Read More",
+    "viewAll": "View All Posts",
+    "noPosts": "No posts yet."
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Your Name",
+    "email": "Your Email",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message sent successfully!",
+    "placeholderName": "John Doe",
+    "placeholderEmail": "john@example.com",
+    "placeholderMessage": "Hi, I'd like to connect with you..."
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "backToTop": "Back to top"
+  }
+}
