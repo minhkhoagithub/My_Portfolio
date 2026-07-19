@@ -50,10 +50,12 @@
     "title": "Projects",
     "viewProject": "Live Demo",
     "viewCode": "Source Code",
-    "techStack": "Tech Stack"
-  },
-  "testimonials": {
-    "title": "Testimonials"
+    "techStack": "Tech Stack",
+    "viewDetails": "View Details",
+    "features": "Features",
+    "myRole": "My Role",
+    "architecture": "Architecture",
+    "readBlog": "Read Blog Post"
   },
   "blog": {
     "title": "Blog",

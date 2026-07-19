@@ -4,7 +4,7 @@ import { FiMenu, FiX } from 'react-icons/fi'
 import ThemeToggle from '../ui/ThemeToggle'
 import LanguageToggle from '../ui/LanguageToggle'
 
-const navItems = ['home', 'about', 'experience', 'skills', 'projects', 'testimonials', 'blog', 'contact']
+const navItems = ['home', 'about', 'experience', 'skills', 'projects', 'blog', 'contact']
 
 export default function Navbar() {
   const { t } = useTranslation()

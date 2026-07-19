@@ -50,10 +50,12 @@
     "title": "Dự Án",
     "viewProject": "Xem Demo",
     "viewCode": "Mã Nguồn",
-    "techStack": "Công nghệ"
-  },
-  "testimonials": {
-    "title": "Nhận Xét"
+    "techStack": "Công nghệ",
+    "viewDetails": "Xem Chi Tiết",
+    "features": "Tính năng",
+    "myRole": "Vai trò của tôi",
+    "architecture": "Kiến trúc",
+    "readBlog": "Đọc Bài Viết"
   },
   "blog": {
     "title": "Blog",
