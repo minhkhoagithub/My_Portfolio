@@ -4,6 +4,7 @@
 *.jpg
 *.png
 *.jpeg
+!my-portfolio/public/images/**
 node_modules/
 dist/
 .vercel/
